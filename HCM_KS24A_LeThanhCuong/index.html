@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eggplant</title>
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div id="container">
+        <h1>Quản lí sinh viên</h1>
+            <form onsubmit="add(event)" id="box1">
+                <input id="name" name="name" class="inputBox1" type="text" placeholder="Họ và tên">
+                <h2 id="warningName"></h2>
+                <input id="id" name="id" class="inputBox1" type="text" placeholder="Mã số sinh viên">
+                <h2 id="warningId"></h2>
+                <input id="email" name="email" class="inputBox1" type="text" placeholder="Email">
+                <h2 id="warningEmail"></h2>
+                <input id="class" name="class" class="inputBox1" type="text" placeholder="Lớp">
+                <h2 id="warningClass"></h2>
+                <button type="submit" class="btn btn-primary" id="buttomBox1">Xác nhận</button>
+            </form>
+            <div id="box2">
+                <form onsubmit="searchStudents(event)" id="formBox2">
+                    <input id="search" name="search"  type="text" placeholder="Tìm kiếm theo tên:">
+                    <button style="display: none;"></button>
+                </form>
+                <div style="margin-top: 30px;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Họ và tên</th>
+                                <th scope="col">MSSV</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Lớp</th>
+                                <th scope="col">Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody id="list"></tbody>
+                    </table>
+                </div>
+            </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
